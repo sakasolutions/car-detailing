@@ -19,7 +19,12 @@ body {
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 15px 20px;
+    gap: 20px;
+    box-sizing: border-box;
   }
+  
   
   .nav-logo {
     font-weight: 700;
@@ -57,7 +62,11 @@ body {
     font-size: 0.9rem;
     letter-spacing: 1px;
     transition: background 0.3s ease;
+    white-space: nowrap;
+    flex-shrink: 0;
+    max-width: 100%;
   }
+  
   
   .nav-button:hover {
     background-color: #d40000;
@@ -626,4 +635,13 @@ body {
   .nav-button {
     display: none;
   }
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html, body {
+  overflow-x: hidden;
+  max-width: 100%;
 }

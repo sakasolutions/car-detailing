@@ -645,3 +645,54 @@ html, body {
   overflow-x: hidden;
   max-width: 100%;
 }
+
+
+/* Bild für Desktop */
+.about-image-desktop {
+  flex: 1 1 600px;
+  display: block;
+}
+
+.about-image-desktop img {
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  box-shadow: 0 5px 30px rgba(0, 0, 0, 0.1);
+  transition: transform 0.3s ease;
+}
+
+.about-image-desktop img:hover {
+  transform: scale(1.01);
+}
+
+
+/* Bild für Mobile */
+.about-image-wrapper {
+  text-align: center;
+  padding-top: 30px;
+  display: none; /* nur mobil sichtbar */
+}
+
+.about-image-mobile {
+  max-width: 90%;
+  height: auto;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+  transition: transform 0.3s ease;
+}
+
+.about-image-mobile:hover {
+  transform: scale(1.02);
+}
+
+/* Media Query: Desktop-Bild ausblenden, Mobile-Bild anzeigen */
+@media (max-width: 768px) {
+  .about-image-desktop {
+    display: none;
+  }
+
+  .about-image-wrapper {
+    display: block;
+  }
+}
+
